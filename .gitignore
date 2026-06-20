@@ -1,0 +1,52 @@
+# ===== Python =====
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg-info/
+dist/
+build/
+*.egg
+*.whl
+
+# ===== Virtual Environments =====
+venv/
+.venv/
+env/
+.env/
+
+# ===== IDE / Editors =====
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+*.sublime-project
+*.sublime-workspace
+
+# ===== OS Files =====
+Thumbs.db
+.DS_Store
+Desktop.ini
+
+# ===== Flask =====
+instance/
+.flaskenv
+.webassets-cache
+
+# ===== Secret / Config =====
+*.secret
+*.key
+.env.local
+.env.production
+
+# ===== Logs =====
+*.log
+
+# ===== Testing =====
+.coverage
+.pytest_cache/
+htmlcov/
+
+# ===== Project Specific =====
+# 如果后续生成任何下载/上传文件目录，可在此添加
