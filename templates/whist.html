@@ -126,7 +126,7 @@
                     <div class="info-bottom-right">
                         <div id="trick-counter">
                             Trick {{ (game_state['scores'].values() | sum) +
-                            (1 if game_state['stop_type'] not in ['game_over', 'new_trick'] else 0) }} / 13
+                            (1 if game_state['stop_type'] in ['lead_card', 'follow_card'] else 0) }} / 13
                         </div>
                     </div>
                 </div>

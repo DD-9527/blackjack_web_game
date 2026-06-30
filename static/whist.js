@@ -14,6 +14,7 @@ function getLeadSuit() {
 function isCardEligible(card) {
     if (!gameState
         || gameState.stop_type === 'new_trick'
+        || gameState.stop_type === 'trick_done'
         || gameState.stop_type === 'game_over') {
         return false;
     }
@@ -80,7 +81,7 @@ function proceedAction() {
         return;
     }
 
-    if (gameState.stop_type === 'new_trick') {
+    if (gameState.stop_type === 'new_trick' || gameState.stop_type === 'trick_done') {
         window.location.href = '/game_update/new_trick';
         return;
     }
@@ -103,6 +104,12 @@ function initProceedButton() {
 
     switch (gameState.stop_type) {
         case 'new_trick':
+            btn.textContent = 'New Trick';
+            btn.disabled = false;
+            btn.classList.add('visible');
+            break;
+
+        case 'trick_done':
             btn.textContent = 'New Trick';
             btn.disabled = false;
             btn.classList.add('visible');

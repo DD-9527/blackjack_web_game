@@ -49,4 +49,6 @@ instance/
 htmlcov/
 
 # ===== Project Specific =====
-# 如果后续生成任何下载/上传文件目录，可在此添加
+train/
+try2/
+whist_debug.log
